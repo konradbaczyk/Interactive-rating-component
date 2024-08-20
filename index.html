@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
+
+		<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+
+		<link rel="stylesheet" href="./css/style.css" />
+
+		<title>Frontend Mentor | Interactive rating component</title>
+	</head>
+
+	<body>
+		<div class="feedback-box">
+			<div class="score-side">
+				<div class="score-side__icon">
+					<svg width="17" height="16" xmlns="http://www.w3.org/2000/svg">
+						<path
+							d="m9.067.43 1.99 4.031c.112.228.33.386.58.422l4.45.647a.772.772 0 0 1 .427 1.316l-3.22 3.138a.773.773 0 0 0-.222.683l.76 4.431a.772.772 0 0 1-1.12.813l-3.98-2.092a.773.773 0 0 0-.718 0l-3.98 2.092a.772.772 0 0 1-1.119-.813l.76-4.431a.77.77 0 0 0-.222-.683L.233 6.846A.772.772 0 0 1 .661 5.53l4.449-.647a.772.772 0 0 0 .58-.422L7.68.43a.774.774 0 0 1 1.387 0Z"
+							fill="#FC7614" />
+					</svg>
+				</div>
+
+				<h2 class="feedback-box__heading">How did we do?</h2>
+
+				<p class="score-side__text">
+					Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!
+				</p>
+
+				<form class="score-side__form">
+					<div class="score-side__rates">
+						<div class="score-side__rate">
+							<input class="score-side__rate--input rate" type="radio" value="1" id="rate-1" name="rate" />
+							<label class="score-side__rate--label" for="rate-1">1</label>
+						</div>
+
+						<div class="score-side__rate">
+							<input class="score-side__rate--input rate" type="radio" value="2" id="rate-2" name="rate" />
+							<label class="score-side__rate--label" for="rate-2">2</label>
+						</div>
+
+						<div class="score-side__rate">
+							<input class="score-side__rate--input rate" type="radio" value="3" id="rate-3" name="rate" />
+							<label class="score-side__rate--label" for="rate-3">3</label>
+						</div>
+
+						<div class="score-side__rate">
+							<input class="score-side__rate--input rate" type="radio" value="4" id="rate-4" name="rate" />
+							<label class="score-side__rate--label" for="rate-4">4</label>
+						</div>
+
+						<div class="score-side__rate">
+							<input class="score-side__rate--input rate" type="radio" value="5" id="rate-5" name="rate" />
+							<label class="score-side__rate--label" for="rate-5">5</label>
+						</div>
+					</div>
+
+					<input class="score-side__button" type="submit" value="SUBMIT" id="submit-btn" />
+				</form>
+			</div>
+
+			<div class="thanks-side" id="thanks-side">
+				<img src="./images/illustration-thank-you.svg" alt="" class="thanks-side__img" />
+
+				<p class="thanks-side__rate-line">You selected <span id="selected-rate"></span> out of 5</p>
+
+				<h2 class="feedback-box__heading thanks-side__heading">Thank you!</h2>
+
+				<p class="thanks-side__text">
+					We appreciate you taking the time to give a rating. If you ever need more support, don’t hesitate to get in touch!
+				</p>
+			</div>
+		</div>
+
+		<script src="./app.js"></script>
+	</body>
+</html>

@@ -1,0 +1,184 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  height: 100svh;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+button {
+  background: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  outline: none;
+}
+
+input,
+select,
+textarea {
+  border: 1px solid transparent;
+  outline: none;
+}
+
+:root {
+  --Orange: rgb(251, 116, 19);
+  --White: rgb(255, 255, 255);
+  --Light-Grey: rgb(149, 158, 172);
+  --Light-Grey-Bg: rgba(149, 158, 172, 0.2);
+  --Dark-Blue: rgb(37, 45, 55);
+  --Very-Dark-Blue: rgb(18, 20, 23);
+}
+
+body {
+  display: flex;
+  align-items: center;
+  font-family: "Overpass", sans-serif;
+  font-size: 1.5rem;
+  background-color: var(--Very-Dark-Blue);
+}
+
+.feedback-box {
+  position: relative;
+  max-width: 34rem;
+  height: 31rem;
+  margin: auto;
+}
+.feedback-box__heading {
+  color: var(--White);
+}
+
+.score-side,
+.thanks-side {
+  padding: 1.5em;
+  background-color: var(--Dark-Blue);
+  border-radius: 12px;
+}
+
+.score-side {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.score-side__icon {
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0.7em;
+  display: flex;
+  background-color: var(--Light-Grey-Bg);
+  border-radius: 50%;
+}
+.score-side__text {
+  color: var(--Light-Grey);
+}
+.score-side__rates {
+  margin-bottom: 1em;
+  display: flex;
+  justify-content: space-between;
+}
+.score-side__rate {
+  position: relative;
+  color: var(--Light-Grey);
+  font-weight: 700;
+}
+.score-side__rate--input {
+  width: 4.4rem;
+  height: 4.4rem;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: var(--Light-Grey-Bg);
+  border-radius: 50%;
+  transition: background 0.3s;
+}
+.score-side__rate--input:hover, .score-side__rate--input:focus {
+  cursor: pointer;
+  background-color: var(--Orange);
+}
+.score-side__rate--input:hover ~ label, .score-side__rate--input:focus ~ label {
+  color: var(--Dark-Blue);
+}
+.score-side__rate--input:checked {
+  background-color: var(--White);
+}
+.score-side__rate--input:checked ~ label {
+  color: var(--Dark-Blue);
+}
+.score-side__rate--label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -55%);
+  cursor: pointer;
+  transition: color 0.3s;
+}
+.score-side__button {
+  width: 100%;
+  padding: 0.8em;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: var(--Dark-Blue);
+  background-color: var(--Orange);
+  border-radius: 24px;
+  transition: background 0.3s;
+}
+.score-side__button:hover {
+  color: var(--Dark-Blue);
+  background-color: var(--White);
+  cursor: pointer;
+}
+
+.thanks-side {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  border-radius: 12px;
+  display: none;
+}
+.thanks-side__img {
+  width: 14rem;
+  margin-bottom: 1em;
+}
+.thanks-side__rate-line {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto 1.6em;
+  padding: 0.5em 0.8em 0.3em;
+  color: var(--Orange);
+  background-color: var(--Light-Grey-Bg);
+  border-radius: 18px;
+}
+.thanks-side__heading {
+  margin-bottom: 0.4em;
+}
+.thanks-side__text {
+  text-align: center;
+  color: var(--Light-Grey);
+}
+
+.show-modal {
+  display: block;
+}/*# sourceMappingURL=style.css.map */
